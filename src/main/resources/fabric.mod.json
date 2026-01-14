@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "salma-mod",
+	"version": "${version}",
+	"name": "Salma mod",
+	"description": "A mod that introduces my black tortoiseshell cat (Salma) into the game!",
+	"authors": [
+		"lamps-dev!"
+	],
+	"contact": {
+		"homepage": "https://lamps-dev.dev",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/salma-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lampsdev.salmamod.SalmaMod"
+		],
+		"fabric-datagen": [
+			"net.lampsdev.salmamod.SalmaModDataGenerator"
+		],
+		"client": [
+			"net.lampsdev.salmamod.SalmaModClient"
+		]
+	},
+	"mixins": [
+		"salma-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
