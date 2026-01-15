@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item BLACK_FUR = registerItem("black_fur", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SalmaMod.MOD_ID,"black_fur")))));
-
+    public static final Item SALMA_HEAD = registerItem("salma_head", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SalmaMod.MOD_ID,"salma_head")))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(SalmaMod.MOD_ID, name), item);
@@ -23,6 +23,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(BLACK_FUR);
+            entries.add(SALMA_HEAD);
         });
     }
 }
